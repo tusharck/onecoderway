@@ -1,6 +1,6 @@
-# array = [2,7,11,15]
-# target = 9
-# ans = (0,1)
+array = [2,11,7,15]
+target = 9
+# ans = (0,2)
 
 def twoSum(nums, target):
         hash_map = {}
@@ -9,12 +9,8 @@ def twoSum(nums, target):
             x = target - nums[i]
             
             if x in hash_map:
-                return i, hash_map[x]
+                return hash_map[x], i
                 
             hash_map[nums[i]] = i
 
-
-l = [2,7,11,15]
-target = 9
-
-print(twoSum(l, target))
+print(twoSum(array, target))
